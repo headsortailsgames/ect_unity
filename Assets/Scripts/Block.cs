@@ -14,4 +14,11 @@ public class Block : MonoBehaviour {
 		rigidbody.isKinematic = false;
 		rigidbody.AddForce (force, ForceMode.Impulse);
 	}
+
+	void OnCollisionEnter(Collision collision) {
+		if (collision.gameObject.CompareTag ("Block") || collision.gameObject.CompareTag ("Wall")
+			|| collision.gameObject.CompareTag ("Player")) {
+			Destroy (gameObject);
+		}
+	}
 }
