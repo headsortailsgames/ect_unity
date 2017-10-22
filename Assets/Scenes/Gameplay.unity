@@ -305,7 +305,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 3.21, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &169274391
 MeshFilter:
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 475050120}
   - component: {fileID: 475050119}
   - component: {fileID: 475050118}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1199,7 +1199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5826d2687e28646a4f32afbcaa5d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 5
   blockPrefab: {fileID: 1884915790764642, guid: 1b3a2e7f680eef040bbb60b2e8d11bc4,
     type: 2}
 --- !u!114 &935336312
@@ -1327,13 +1326,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 940065114}
-  m_LocalRotation: {x: 0.122085184, y: 0.011322103, z: -0.0013931708, w: 0.9924541}
-  m_LocalPosition: {x: -0.1628791, y: 1.6085033, z: -6.5625772}
+  m_LocalRotation: {x: 0.47503307, y: 0, z: 0, w: 0.879968}
+  m_LocalPosition: {x: -0.16893092, y: 7.7271857, z: -5.696648}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 56.723003, y: 0, z: 0}
 --- !u!1 &949056489
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,7 +1436,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 3.21, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &960193464
 MeshFilter:
@@ -1960,7 +1959,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 3.21, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1308364633
 MeshFilter:
@@ -3007,7 +3006,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 3.21, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2051876513
 MeshFilter:
