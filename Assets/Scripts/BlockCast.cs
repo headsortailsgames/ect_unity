@@ -5,6 +5,7 @@ using UnityEngine;
 public class BlockCast : MonoBehaviour {
 
 	public GameObject blockPrefab;
+	public int playerNumber = 1;
 
 	private bool onSpawn;
 	private Transform blockSpawn;private Animator animator;
@@ -23,7 +24,7 @@ public class BlockCast : MonoBehaviour {
 	}
 
 	public void Spawn () {
-		if (!this.onSpawn && Input.GetButtonDown ("Spawn Block")) {
+		if (!this.onSpawn && Input.GetButtonDown ("Spawn Block P" + playerNumber)) {
 			this.onSpawn = true;
 			this.movement.enabled = false;
 			this.animator.SetTrigger ("SpawnBlock");

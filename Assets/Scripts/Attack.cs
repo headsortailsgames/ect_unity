@@ -5,6 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour {
 
 	public float force = 50.0f;
+	public int playerNumber = 1;
 
 	private bool isAttacking = false;
 	private Animator animator;
@@ -16,7 +17,7 @@ public class Attack : MonoBehaviour {
 	}
 
 	void Update() {
-		if (!this.isAttacking && Input.GetButtonDown ("Attack")) {
+		if (!this.isAttacking && Input.GetButtonDown ("Attack P" + playerNumber)) {
 			this.isAttacking = true;
 			this.movement.enabled = false;
 			this.animator.SetTrigger ("Attack");

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour {
 
 	public float speed = 5f;
+	public int playerNumber = 1;
 
 	private new Rigidbody rigidbody;
 	private Animator animator;
@@ -20,8 +21,8 @@ public class Movement : MonoBehaviour {
 
 	public void Move () {
 		Vector3 velocity = new Vector3 ();
-		velocity.x = Input.GetAxis("Horizontal");
-		velocity.z = Input.GetAxis ("Vertical");
+		velocity.x = Input.GetAxis("Horizontal P" + playerNumber);
+		velocity.z = Input.GetAxis ("Vertical P" + playerNumber);
 
 		velocity *= this.speed;
 
