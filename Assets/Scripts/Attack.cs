@@ -32,10 +32,8 @@ public class Attack : MonoBehaviour {
 		int layerMask = LayerMask.GetMask ("Block");
 		bool hitted = Physics.Raycast (origin, transform.forward, out hit, Mathf.Infinity, layerMask);
 		if (hitted) {
-			GameObject block = hit.collider.gameObject;
-			Rigidbody blockBody = block.GetComponent<Rigidbody> ();
-			blockBody.isKinematic = false;
-			blockBody.AddForce (transform.forward * force, ForceMode.Impulse);
+			Block block = hit.collider.gameObject.GetComponent<Block>();
+			block.Fire(transform.forward * force);
 		}
 	}
 
