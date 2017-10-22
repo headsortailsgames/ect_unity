@@ -13,4 +13,8 @@ public class PlayerAnimationEvents : MonoBehaviour {
 	void OnAttackEnd() {
 		this.attack.OnAttackEnd ();
 	}
+
+	void OnPunch() {
+		this.attack.OnPunch ();
+	}
 }
