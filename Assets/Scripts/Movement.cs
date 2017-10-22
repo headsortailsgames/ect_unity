@@ -7,10 +7,11 @@ public class Movement : MonoBehaviour {
 	public float speed = 5f;
 
 	private new Rigidbody rigidbody;
-
+	private Animator animator;
 
 	void Awake () {
 		this.rigidbody = GetComponent<Rigidbody> ();
+		this.animator = GetComponent<Animator> ();
 	}
 
 	void Update () {
@@ -23,6 +24,13 @@ public class Movement : MonoBehaviour {
 		velocity.z = Input.GetAxis ("Vertical");
 
 		velocity *= this.speed;
+
+		if (velocity.sqrMagnitude > 0) {
+			this.animator.SetBool ("Running", true);
+		} else {
+			this.animator.SetBool ("Running", false);
+		}
+
 
 		this.rigidbody.velocity = velocity;
 	}
