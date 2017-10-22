@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BlockCast : MonoBehaviour {
 
-	public float destroyTime = 5f;
 	public GameObject blockPrefab;
 
 	private Transform blockSpawn;
@@ -19,8 +18,7 @@ public class BlockCast : MonoBehaviour {
 
 	public void Spawn () {
 		if (Input.GetButtonDown ("Spawn Block")) {
-			GameObject block = Instantiate (this.blockPrefab, this.blockSpawn.position, this.blockSpawn.rotation);
-			Destroy (block, this.destroyTime);
+			Instantiate (this.blockPrefab, this.blockSpawn.position, this.blockSpawn.rotation);
 		}
 	}
 }
