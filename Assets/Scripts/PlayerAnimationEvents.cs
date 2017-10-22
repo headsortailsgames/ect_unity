@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerAnimationEvents : MonoBehaviour {
 
 	private Attack attack;
+	private BlockCast blockCast;
 
 	void Awake() {
 		this.attack = GetComponentInParent<Attack> ();
+		this.blockCast = GetComponentInParent<BlockCast> ();
 	}
 
 	void OnAttackEnd() {
@@ -16,5 +18,13 @@ public class PlayerAnimationEvents : MonoBehaviour {
 
 	void OnPunch() {
 		this.attack.OnPunch ();
+	}
+
+	void OnSpawnBlock () {
+		this.blockCast.OnSpawnBlock ();
+	}
+
+	void OnSpawnBlockEnd () {
+		this.blockCast.OnSpawnBlockEnd ();
 	}
 }

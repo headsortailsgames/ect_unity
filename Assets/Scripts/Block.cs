@@ -7,16 +7,18 @@ public class Block : MonoBehaviour {
 	public float destroyTime = 5f;
 
 	private bool onFire = false;
+	private new Collider collider;
 	private new Rigidbody rigidbody;
 	private ParticleSystem destroyParticle;
 	private Animator animator;
-	private Collider collider;
 
 	void Awake () {
 		this.rigidbody = GetComponent<Rigidbody> ();
 		this.destroyParticle = GetComponentInChildren<ParticleSystem> ();
 		this.animator = GetComponent<Animator>();
 		this.collider = GetComponent<Collider> ();
+
+		this.animator.Update (0f);
 
 		Invoke ("DestroyBlock", this.destroyTime);
 	}
