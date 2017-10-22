@@ -26,11 +26,11 @@ public class Movement : MonoBehaviour {
 		velocity *= this.speed;
 
 		if (velocity.sqrMagnitude > 0) {
+			this.transform.forward = velocity;
 			this.animator.SetBool ("Running", true);
 		} else {
 			this.animator.SetBool ("Running", false);
 		}
-
 
 		this.rigidbody.velocity = velocity;
 	}
