@@ -174,7 +174,7 @@ ModelImporter:
       name: Attack
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 127
+      lastFrame: 90
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -194,7 +194,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.24409175
+      - time: 0.3341239
         functionName: OnPunch
         data: 
         objectReferenceParameter: {instanceID: 0}

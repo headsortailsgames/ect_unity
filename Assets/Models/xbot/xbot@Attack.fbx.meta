@@ -173,7 +173,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack
       takeName: mixamo.com
-      firstFrame: 0
+      firstFrame: 30
       lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
@@ -193,7 +193,21 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.33687064
+        functionName: OnPunch
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.9941691
+        functionName: OnAttackEnd
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

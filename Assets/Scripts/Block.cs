@@ -7,6 +7,7 @@ public class Block : MonoBehaviour {
 	public float destroyTime = 5f;
 
 	private bool onFire = false;
+	private bool collided = false;
 	private new Collider collider;
 	private new Rigidbody rigidbody;
 	private ParticleSystem destroyParticle;
@@ -41,6 +42,10 @@ public class Block : MonoBehaviour {
 	}
 
 	private void DestroyBlock() {
+		if (this.collided) return;
+
+		this.collided = true;
+
 		this.destroyParticle.Play ();
 		this.animator.SetBool ("destroy", true);
 		this.collider.enabled = false;
