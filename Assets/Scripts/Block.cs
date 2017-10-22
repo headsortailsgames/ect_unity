@@ -38,6 +38,11 @@ public class Block : MonoBehaviour {
 		
 		if (collidedWithBlock || (collidedWithNonBlock && this.onFire)) {
 			DestroyBlock ();
+
+			Health health = collision.gameObject.GetComponent<Health> ();
+			if (health != null) {
+				health.TakeDamage ();
+			}
 		}
 	}
 
