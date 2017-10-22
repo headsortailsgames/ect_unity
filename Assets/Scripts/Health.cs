@@ -14,6 +14,8 @@ public class Health : MonoBehaviour {
 
 	private Image[] uiHearts;
 	private Animator animator;
+	private Rigidbody rigidbody;
+
 	private Attack attack;
 	private Movement movement;
 	private BlockCast blockCast;
@@ -23,6 +25,7 @@ public class Health : MonoBehaviour {
 		this.movement = GetComponent<Movement> ();
 		this.blockCast = GetComponent<BlockCast> ();
 
+		this.rigidbody = GetComponent<Rigidbody> ();
 		this.animator = this.transform.Find("Model").GetComponent<Animator> ();
 
 		this.uiHearts = new Image[this.lifes];
@@ -41,8 +44,12 @@ public class Health : MonoBehaviour {
 		this.movement.enabled = false;
 		this.blockCast.enabled = false;
 
-		if (this.lifes > 0)
+		if (this.lifes > 0) {
 			this.animator.SetTrigger ("TakeDamage");
+		} else {
+			this.animator.SetTrigger ("Dead");
+			this.rigidbody.isKinematic = true;
+		}
 	}
 
 	public void OnTakeDamageEnd () {
