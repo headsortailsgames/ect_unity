@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 128 64"
+   xml:space="preserve"
+   id="svg22"
+   sodipodi:docname="heart.svg"
+   width="128"
+   height="64"
+   inkscape:version="0.92.1 r15371"><metadata
+   id="metadata28"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs26" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1366"
+   inkscape:window-height="706"
+   id="namedview24"
+   showgrid="false"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0"
+   inkscape:zoom="0.921875"
+   inkscape:cx="-29.596773"
+   inkscape:cy="-45.910023"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg22" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill:#C75C5C;}
+	.st1{opacity:0.2;}
+	.st2{fill:#231F20;}
+	.st3{fill:#FFFFFF;}
+</style>
+
+<g
+   id="Layer_2">
+</g>
+<g
+   id="g4556"><g
+     id="Layer_1">
+	<g
+   id="g6">
+		<circle
+   id="circle4"
+   r="32"
+   cy="32"
+   cx="32"
+   class="st0"
+   style="fill:#c75c5c" />
+	</g>
+	<g
+   id="g12"
+   class="st1"
+   style="opacity:0.2">
+		<g
+   id="g10">
+			<path
+   id="path8"
+   d="M 50,31 C 49.9,25.5 45.4,20.6 39.9,20.6 c -3.2,0 -6,1.7 -7.9,4.1 -1.9,-2.5 -4.7,-4.1 -7.9,-4.1 -5.5,0 -10,4.9 -10.1,10.4 v 0 c 0,0 0,0.1 0,0.1 0,0 0,0 0,0.1 0,0.2 0,0.3 0,0.4 0.5,14.1 17.8,19.8 17.8,19.8 0,0 17.6,-5.7 18.2,-19.8 0,-0.2 0,-0.3 0,-0.4 0,0 0,-0.1 0,-0.2 0,0.1 0,0 0,0 z"
+   class="st2"
+   inkscape:connector-curvature="0"
+   style="fill:#231f20" />
+		</g>
+	</g>
+	<g
+   id="g18">
+		<g
+   id="g16">
+			<path
+   id="path14"
+   d="M 50,29 C 49.9,23.5 45.4,18.6 39.9,18.6 c -3.2,0 -6,1.7 -7.9,4.1 -1.9,-2.5 -4.7,-4.1 -7.9,-4.1 -5.5,0 -10,4.9 -10.1,10.4 v 0 c 0,0 0,0.1 0,0.1 0,0 0,0 0,0.1 0,0.2 0,0.3 0,0.4 0.5,14.1 17.8,19.8 17.8,19.8 0,0 17.6,-5.7 18.2,-19.8 0,-0.2 0,-0.3 0,-0.4 0,0 0,-0.1 0,-0.2 0,0.1 0,0 0,0 z"
+   class="st3"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
+		</g>
+	</g>
+</g><g
+     transform="translate(64)"
+     id="Layer_1-3"><g
+       id="g6-3"><circle
+         style="fill:#c75c5c"
+         id="circle4-2"
+         r="32"
+         cy="32"
+         cx="32"
+         class="st0" /></g></g></g></svg>
