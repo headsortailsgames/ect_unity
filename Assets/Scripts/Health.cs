@@ -13,9 +13,18 @@ public class Health : MonoBehaviour {
 	public Image heart3;
 
 	private Image[] uiHearts;
-
+	private Animator animator;
+	private Attack attack;
+	private Movement movement;
+	private BlockCast blockCast;
 
 	void Awake () {
+		this.attack = GetComponent<Attack> ();
+		this.movement = GetComponent<Movement> ();
+		this.blockCast = GetComponent<BlockCast> ();
+
+		this.animator = this.transform.Find("Model").GetComponent<Animator> ();
+
 		this.uiHearts = new Image[this.lifes];
 		this.uiHearts [0] = heart1;
 		this.uiHearts [1] = heart2;
@@ -28,8 +37,17 @@ public class Health : MonoBehaviour {
 		this.lifes--;
 		this.uiHearts [this.lifes].sprite = emptyHeart;
 
-		if (this.lifes == 0) {
-			Debug.Log ("DEAD");
-		}
+		this.attack.enabled = false;
+		this.movement.enabled = false;
+		this.blockCast.enabled = false;
+
+		if (this.lifes > 0)
+			this.animator.SetTrigger ("TakeDamage");
+	}
+
+	public void OnTakeDamageEnd () {
+		this.attack.enabled = true;
+		this.movement.enabled = true;
+		this.blockCast.enabled = true;
 	}
 }
