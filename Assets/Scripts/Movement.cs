@@ -21,6 +21,11 @@ public class Movement : MonoBehaviour {
 		velocity.x = Input.GetAxis("Horizontal P" + this.player.playerNumber);
 		velocity.z = Input.GetAxis ("Vertical P" + this.player.playerNumber);
 
+		if (Mathf.Abs(velocity.x) >= Mathf.Abs(velocity.z))
+			velocity.z = 0;
+		else
+			velocity.x = 0;
+		
 		velocity *= this.speed;
 
 		if (velocity.sqrMagnitude > 0) {
