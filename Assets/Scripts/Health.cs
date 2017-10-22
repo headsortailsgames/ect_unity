@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour {
 
@@ -12,9 +13,11 @@ public class Health : MonoBehaviour {
 	public Image heart2;
 	public Image heart3;
 
+	public UnityEvent onDead;
+
 	private Image[] uiHearts;
 	private Animator animator;
-	private Rigidbody rigidbody;
+	private new Rigidbody rigidbody;
 
 	private Attack attack;
 	private Movement movement;
@@ -49,6 +52,8 @@ public class Health : MonoBehaviour {
 		} else {
 			this.animator.SetTrigger ("Dead");
 			this.rigidbody.isKinematic = true;
+
+			this.onDead.Invoke ();
 		}
 	}
 

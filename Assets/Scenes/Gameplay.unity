@@ -1433,6 +1433,7 @@ GameObject:
   - component: {fileID: 922770945}
   - component: {fileID: 922770944}
   - component: {fileID: 922770950}
+  - component: {fileID: 922770951}
   m_Layer: 0
   m_Name: PlayerX
   m_TagString: Player
@@ -1536,6 +1537,33 @@ MonoBehaviour:
   heart1: {fileID: 1676046199}
   heart2: {fileID: 1651917875}
   heart3: {fileID: 2127703229}
+  onDead:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 935336317}
+        m_MethodName: OnVictory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &922770951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 922770943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7ae8c1584112c4aa0ca77faccffc27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &935336309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,6 +1578,7 @@ GameObject:
   - component: {fileID: 935336311}
   - component: {fileID: 935336315}
   - component: {fileID: 935336316}
+  - component: {fileID: 935336317}
   m_Layer: 0
   m_Name: PlayerY
   m_TagString: Player
@@ -1653,6 +1682,33 @@ MonoBehaviour:
   heart1: {fileID: 958119272}
   heart2: {fileID: 1125477106}
   heart3: {fileID: 1211939466}
+  onDead:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 922770951}
+        m_MethodName: OnVictory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &935336317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935336309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7ae8c1584112c4aa0ca77faccffc27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &940065114
 GameObject:
   m_ObjectHideFlags: 0
