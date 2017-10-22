@@ -11,10 +11,10 @@ public class Movement : MonoBehaviour {
 
 	void Awake () {
 		this.rigidbody = GetComponent<Rigidbody> ();
-		this.animator = GetComponent<Animator> ();
+		this.animator = this.transform.Find("Model").GetComponent<Animator> ();
 	}
 
-	void Update () {
+	void FixedUpdate () {
 		Move ();
 	}
 
