@@ -5,22 +5,19 @@ using UnityEngine;
 public class Attack : MonoBehaviour {
 
 	public float force = 50.0f;
-	public int playerNumber = 1;
 
 	private bool isAttacking = false;
-	private Animator animator;
-	private Movement movement;
+	private Player player;
 
-	void Awake() {
-		this.animator = this.transform.Find("Model").GetComponent<Animator> ();
-		this.movement = GetComponent<Movement> ();
+	void Awake () {
+		player = GetComponent<Player> ();
 	}
 
 	void Update() {
-		if (!this.isAttacking && Input.GetButtonDown ("Attack P" + playerNumber)) {
+		if (!this.isAttacking && Input.GetButtonDown ("Attack P" + this.player.playerNumber)) {
 			this.isAttacking = true;
-			this.movement.enabled = false;
-			this.animator.SetTrigger ("Attack");
+			this.player.SetScripts (false);
+			this.player.animator.SetTrigger ("Attack");
 		}
 	}
 
@@ -40,6 +37,6 @@ public class Attack : MonoBehaviour {
 
 	public void OnAttackEnd() {
 		this.isAttacking = false;
-		this.movement.enabled = true;
+		this.player.SetScripts (true);
 	}
 }

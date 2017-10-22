@@ -4,22 +4,14 @@ using UnityEngine;
 
 public class Victory : MonoBehaviour {
 
-	private Attack attack;
-	private BlockCast blockCast;
-
-	private Animator animator;
+	private Player player;
 
 	void Awake () {
-		this.attack = GetComponent<Attack> ();
-		this.blockCast = GetComponent<BlockCast> ();
-
-		this.animator = this.transform.Find("Model").GetComponent<Animator> ();
+		player = GetComponent<Player> ();
 	}
 
 	public void OnVictory () {
-		this.attack.enabled = false;
-		this.blockCast.enabled = false;
-
-		this.animator.SetTrigger ("Victory");
+		this.player.SetScripts (false);
+		this.player.animator.SetTrigger ("Victory");
 	}
 }

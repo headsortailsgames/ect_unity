@@ -4,33 +4,29 @@ using UnityEngine;
 
 public class PlayerAnimationEvents : MonoBehaviour {
 
-	private Attack attack;
-	private Health health;
-	private BlockCast blockCast;
+	private Player player;
 
-	void Awake() {
-		this.attack = GetComponentInParent<Attack> ();
-		this.health = GetComponentInParent<Health> ();
-		this.blockCast = GetComponentInParent<BlockCast> ();
+	void Awake () {
+		player = GetComponentInParent<Player> ();
 	}
 
 	void OnAttackEnd() {
-		this.attack.OnAttackEnd ();
+		this.player.attack.OnAttackEnd ();
 	}
 
 	void OnPunch() {
-		this.attack.OnPunch ();
+		this.player.attack.OnPunch ();
 	}
 
 	void OnSpawnBlock () {
-		this.blockCast.OnSpawnBlock ();
+		this.player.blockCast.OnSpawnBlock ();
 	}
 
 	void OnSpawnBlockEnd () {
-		this.blockCast.OnSpawnBlockEnd ();
+		this.player.blockCast.OnSpawnBlockEnd ();
 	}
 
 	void OnTakeDamageEnd () {
-		this.health.OnTakeDamageEnd ();
+		this.player.health.OnTakeDamageEnd ();
 	}
 }

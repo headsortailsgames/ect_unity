@@ -16,20 +16,11 @@ public class Health : MonoBehaviour {
 	public UnityEvent onDead;
 
 	private Image[] uiHearts;
-	private Animator animator;
-	private new Rigidbody rigidbody;
 
-	private Attack attack;
-	private Movement movement;
-	private BlockCast blockCast;
+	private Player player;
 
 	void Awake () {
-		this.attack = GetComponent<Attack> ();
-		this.movement = GetComponent<Movement> ();
-		this.blockCast = GetComponent<BlockCast> ();
-
-		this.rigidbody = GetComponent<Rigidbody> ();
-		this.animator = this.transform.Find("Model").GetComponent<Animator> ();
+		player = GetComponent<Player> ();
 
 		this.uiHearts = new Image[this.lifes];
 		this.uiHearts [0] = heart1;
@@ -43,23 +34,19 @@ public class Health : MonoBehaviour {
 		this.lifes--;
 		this.uiHearts [this.lifes].sprite = emptyHeart;
 
-		this.attack.enabled = false;
-		this.movement.enabled = false;
-		this.blockCast.enabled = false;
+		this.player.SetScripts (false);
 
 		if (this.lifes > 0) {
-			this.animator.SetTrigger ("TakeDamage");
+			this.player.animator.SetTrigger ("TakeDamage");
 		} else {
-			this.animator.SetTrigger ("Dead");
-			this.rigidbody.isKinematic = true;
+			this.player.animator.SetTrigger ("Dead");
+			this.player.rigidbody.isKinematic = true;
 
 			this.onDead.Invoke ();
 		}
 	}
 
 	public void OnTakeDamageEnd () {
-		this.attack.enabled = true;
-		this.movement.enabled = true;
-		this.blockCast.enabled = true;
+		this.player.SetScripts (true);
 	}
 }

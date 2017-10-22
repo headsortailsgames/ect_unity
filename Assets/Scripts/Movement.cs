@@ -5,14 +5,11 @@ using UnityEngine;
 public class Movement : MonoBehaviour {
 
 	public float speed = 5f;
-	public int playerNumber = 1;
 
-	private new Rigidbody rigidbody;
-	private Animator animator;
+	private Player player;
 
 	void Awake () {
-		this.rigidbody = GetComponent<Rigidbody> ();
-		this.animator = this.transform.Find("Model").GetComponent<Animator> ();
+		player = GetComponent<Player> ();
 	}
 
 	void FixedUpdate () {
@@ -21,18 +18,18 @@ public class Movement : MonoBehaviour {
 
 	public void Move () {
 		Vector3 velocity = new Vector3 ();
-		velocity.x = Input.GetAxis("Horizontal P" + playerNumber);
-		velocity.z = Input.GetAxis ("Vertical P" + playerNumber);
+		velocity.x = Input.GetAxis("Horizontal P" + this.player.playerNumber);
+		velocity.z = Input.GetAxis ("Vertical P" + this.player.playerNumber);
 
 		velocity *= this.speed;
 
 		if (velocity.sqrMagnitude > 0) {
 			this.transform.forward = velocity;
-			this.animator.SetBool ("Running", true);
+			this.player.animator.SetBool ("Running", true);
 		} else {
-			this.animator.SetBool ("Running", false);
+			this.player.animator.SetBool ("Running", false);
 		}
 
-		this.rigidbody.velocity = velocity;
+		this.player.rigidbody.velocity = velocity;
 	}
 }

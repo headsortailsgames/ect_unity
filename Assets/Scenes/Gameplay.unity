@@ -1367,6 +1367,7 @@ GameObject:
   - component: {fileID: 922770949}
   - component: {fileID: 922770948}
   - component: {fileID: 922770947}
+  - component: {fileID: 922770952}
   - component: {fileID: 922770946}
   - component: {fileID: 922770945}
   - component: {fileID: 922770944}
@@ -1391,7 +1392,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 50
-  playerNumber: 2
 --- !u!114 &922770945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1405,7 +1405,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPrefab: {fileID: 1884915790764642, guid: 1b3a2e7f680eef040bbb60b2e8d11bc4,
     type: 2}
-  playerNumber: 2
 --- !u!114 &922770946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1418,7 +1417,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  playerNumber: 2
 --- !u!136 &922770947
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1505,6 +1503,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a7ae8c1584112c4aa0ca77faccffc27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &922770952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 922770943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2c74215e7a46940a4d14308ce7ef8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNumber: 2
+  rigidbody: {fileID: 0}
+  animator: {fileID: 0}
+  attack: {fileID: 0}
+  movement: {fileID: 0}
+  blockCast: {fileID: 0}
+  health: {fileID: 0}
 --- !u!1 &935336309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,6 +1531,7 @@ GameObject:
   - component: {fileID: 935336310}
   - component: {fileID: 935336314}
   - component: {fileID: 935336313}
+  - component: {fileID: 935336318}
   - component: {fileID: 935336312}
   - component: {fileID: 935336311}
   - component: {fileID: 935336315}
@@ -1555,7 +1572,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPrefab: {fileID: 1884915790764642, guid: 1b3a2e7f680eef040bbb60b2e8d11bc4,
     type: 2}
-  playerNumber: 1
 --- !u!114 &935336312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1568,7 +1584,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  playerNumber: 1
 --- !u!136 &935336313
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1609,7 +1624,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 50
-  playerNumber: 1
 --- !u!114 &935336316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1653,6 +1667,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a7ae8c1584112c4aa0ca77faccffc27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &935336318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935336309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2c74215e7a46940a4d14308ce7ef8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNumber: 1
+  rigidbody: {fileID: 0}
+  animator: {fileID: 0}
+  attack: {fileID: 0}
+  movement: {fileID: 0}
+  blockCast: {fileID: 0}
+  health: {fileID: 0}
 --- !u!1 &940065114
 GameObject:
   m_ObjectHideFlags: 0

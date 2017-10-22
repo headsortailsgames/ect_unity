@@ -5,18 +5,17 @@ using UnityEngine;
 public class BlockCast : MonoBehaviour {
 
 	public GameObject blockPrefab;
-	public int playerNumber = 1;
 
 	private bool onSpawn;
-	private Transform blockSpawn;private Animator animator;
-	private Movement movement;
+	private Transform blockSpawn;
 
+	private Player player;
 
 	void Awake () {
+		player = GetComponent<Player> ();
+
 		this.onSpawn = false;
 		this.blockSpawn = transform.Find ("BlockSpawn");
-		this.movement = GetComponent<Movement> ();
-		this.animator = this.transform.Find("Model").GetComponent<Animator> ();
 	}
 
 	void Update () {
@@ -24,10 +23,10 @@ public class BlockCast : MonoBehaviour {
 	}
 
 	public void Spawn () {
-		if (!this.onSpawn && Input.GetButtonDown ("Spawn Block P" + playerNumber)) {
+		if (!this.onSpawn && Input.GetButtonDown ("Spawn Block P" + this.player.playerNumber)) {
 			this.onSpawn = true;
-			this.movement.enabled = false;
-			this.animator.SetTrigger ("SpawnBlock");
+			this.player.SetScripts (false);
+			this.player.animator.SetTrigger ("SpawnBlock");
 		}
 	}
 
@@ -37,6 +36,6 @@ public class BlockCast : MonoBehaviour {
 
 	public void OnSpawnBlockEnd () {
 		this.onSpawn = false;
-		this.movement.enabled = true;
+		this.player.SetScripts (true);
 	}
 }
