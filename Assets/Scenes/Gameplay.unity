@@ -1595,6 +1595,7 @@ GameObject:
   - component: {fileID: 1317529975}
   - component: {fileID: 1317529977}
   - component: {fileID: 1317529974}
+  - component: {fileID: 1317529978}
   m_Layer: 0
   m_Name: PlayerY
   m_TagString: Untagged
@@ -1664,6 +1665,17 @@ CapsuleCollider:
   m_Height: 1.85
   m_Direction: 1
   m_Center: {x: 0, y: 0.925, z: 0}
+--- !u!114 &1317529978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1317529973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329e8d8b4503ac044bb5f3bde1797d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1330733716
 GameObject:
   m_ObjectHideFlags: 0
