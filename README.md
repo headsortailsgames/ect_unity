@@ -22,3 +22,14 @@
 
 [Sweet Dreams](fb.com/sweetdreamsgame): Guerra de travesseiros em uma arena
 local multiplayer
+
+
+## TO DO
+
+- Adicionar menu de pause
+- Adicionar seleção de personagem
+- Refatorar o GameObject "PlayerY" e "PlayerX" para existir somente um player
+- Adicionar particula quando o bloco arrasta
+- Adicionar particula de quando o Player anda
+- Adicionar particula no surgimento do bloco
+- Utilizar joysticks
